@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer</p>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate web developer with a love for clean and elegant code.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of your first project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora iusto harum ex est adipisci repellat, quas at, itaque cupiditate fugiat nisi quasi quis ullam doloremque magnam incidunt velit facilis nemo id similique earum accusantium vitae! Porro iste nam sequi quisquam, asperiores blanditiis nulla illo ducimus doloremque sed? Tempora doloribus, quisquam vitae molestias voluptas atque aperiam sunt nam beatae accusamus asperiores ipsam sit? Quasi, explicabo nisi porro saepe minus odio deserunt necessitatibus asperiores labore dignissimos odit repudiandae iure beatae fuga fugit dolores, quibusdam mollitia? Commodi iusto laudantium nobis. Mollitia voluptatem doloremque neque, totam, corrupti facere, culpa blanditiis molestias quidem magni cupiditate.
+                </p>
+                <button class="toggle-button">Toggle Description</button>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of your second project. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="toggle-button">Toggle Description</button>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: your@email.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </div>
+    
+    <script>
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const project = button.parentElement;
+                const description = project.querySelector('p');
+                description.classList.toggle('show-description');
+            });
+        });
+    </script>
+</body>
+</html>
